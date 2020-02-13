@@ -1,0 +1,39 @@
+//คำสั่งพื้นฐาน cmd **window
+make directory = mkdir
+ดูรายการ directories และ files ใน working directory ปัจจุบัน = dir
+ดูรายการ directories และ files ใน working directory ปัจจุบันแบบละเอียด = dir
+change directory = cd
+
+//git เบื้องต้น
+git --version //เช็คว่า git ใช้งานได้หรือไม่ (Show version git)
+git init // Initialize git repository
+git status //ตรวจสอบสถานะของไฟล์
+git add (file name) // เพิ่มไฟล์เข้า staging area เพื่อพร้อมจะ commit
+
+git config user.name "Your Name"
+git config user.email "yourmail@ku.th" //ตั้งค่าชื่อและอีเมลเพื่อระบุตัวผู้ commit
+//*if u use personal com -> add --glabal after config
+
+git commit -m "เขียนชื่อ commit ตามแต่ใจท่าน"//เก็บ checkpoint ไฟล์
+git add .//ใช้ . (dot) แทนชื่อไฟล์ เพื่อให้ add ทุกไฟล์ที่มีการเปลี่ยนแปลงใน directory ปัจจุบัน
+
+git log --all --decorate --oneline --graph //ดู Checkpoint ทั้งหมด
+//commit id คือเลข 7 ตัวแรก
+
+git remote add <ชื่อ remote เช่น origin> <git url>
+เช่น git remote add origin https://github.com/faniet369/CS113-git101.git
+//เชื่อม local repository (git repo ในเครื่องเรา) กับ github
+
+**ถ้าตั้งชื่อผิด ให้ลบชื่อเก่าก่อน ด้วยคำสั่ง git remote remove <ชื่อ remote> แล้วจึงใช้คำสั่ง git remote add … อีกครั้ง
+
+git push -u origin master //ส่งไฟล์และประวัติไปเก็บที่ github
+//รอบหลังใช้แค่ git push
+
+//นำ Checkpoint เก่ากลับมาทำงาน
+กลับมาทั้งหมด
+	git checkout <commit-id>
+กลับมาบางไฟล์
+	git checkout <commit-id>  <ชื่อไฟล์>
+
+git clone <git-url>
+//เมื่ออยากจะนำ git repository ที่เก็บไว้ใน server มาทำงานต่อ
