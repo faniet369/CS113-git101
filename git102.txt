@@ -1,0 +1,17 @@
+**การสร้าง/แยก Branch
+git clone (git-url) //clone ไฟล์จาก url github
+git branch (branch-name) //create branch
+git branch //ตรวจสอบว่ามี Branch ใดบ้าง
+git checkout (branch-name) //เปลี่ยน Branch ไปที่..
+
+**การ Merge Branch แบบ no Conflict
+git checkout master //ให้เปลี่ยนไปที่ Branch ปลายทางก่อน (ตย master)
+git merge feature //รวม Branch (ตย feature) ให้ไปอยู่ใน master
+
+git pull origin master //ดึงการเปลี่ยนแปลงจาก branch master
+
+**การ Merge Branch แบบมี Conflict
+Conflict หรือความขัดแย้ง เกิดจากการปรับแก้ไขข้อมูลในไฟล์เดิม บรรทัดเดิม ที่อยู่ต่าง Branch กัน
+เมื่อ merge แล้ว git ตัดสินใจไม่ได้ว่าจะใช้ข้อมูลจาก branch ใด
+
+git checkout -b feature2 //สร้าง Branch feature2 และสลับไป Branch นั้นเลย
